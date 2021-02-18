@@ -1,6 +1,6 @@
-package com.ds.component.lock.impl;
+package com.ds.component.locker.impl;
 
-import com.ds.component.lock.RedisClient;
+import com.ds.component.locker.RedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;

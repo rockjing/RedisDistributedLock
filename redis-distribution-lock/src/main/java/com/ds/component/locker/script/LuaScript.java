@@ -1,4 +1,4 @@
-package com.ds.component.lock.script;
+package com.ds.component.locker.script;
 
 import org.springframework.util.StringUtils;
 

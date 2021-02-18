@@ -1,4 +1,4 @@
-package com.ds.component.exception;
+package com.ds.component.locker.exception;
 
 /**
  * @author xiongyx

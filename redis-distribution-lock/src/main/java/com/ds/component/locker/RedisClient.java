@@ -1,4 +1,4 @@
-package com.ds.component.lock;
+package com.ds.component.locker;
 
 import java.util.List;
 import java.util.Map;

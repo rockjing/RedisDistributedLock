@@ -1,4 +1,4 @@
-package com.ds.component.config;
+package com.ds.component.locker.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;

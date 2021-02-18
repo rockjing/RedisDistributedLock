@@ -1,8 +1,8 @@
-package com.ds.component.lock.impl;
+package com.ds.component.locker.impl;
 
-import com.ds.component.lock.DistributeLock;
-import com.ds.component.lock.script.LuaScript;
-import com.ds.component.lock.RedisClient;
+import com.ds.component.locker.DistributeLock;
+import com.ds.component.locker.script.LuaScript;
+import com.ds.component.locker.RedisClient;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

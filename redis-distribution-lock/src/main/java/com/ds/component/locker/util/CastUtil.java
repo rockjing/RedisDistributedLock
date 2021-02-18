@@ -1,4 +1,4 @@
-package com.ds.component.util;
+package com.ds.component.locker.util;
 
 /**
  * @Author xiongyx

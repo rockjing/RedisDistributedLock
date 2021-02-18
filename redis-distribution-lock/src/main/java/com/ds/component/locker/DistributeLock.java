@@ -1,4 +1,4 @@
-package com.ds.component.lock;
+package com.ds.component.locker;
 
 /**
  * 分布式锁 api接口

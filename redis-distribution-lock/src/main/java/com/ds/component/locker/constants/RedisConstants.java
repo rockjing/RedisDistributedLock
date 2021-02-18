@@ -1,4 +1,4 @@
-package com.ds.component.constants;
+package com.ds.component.locker.constants;
 
 /**
  * @Desciption:
