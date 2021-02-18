@@ -17,12 +17,21 @@ public class IDistributeLockerTest {
     IDistributeLocker iDistributeLocker;
 
     @Test
-    public void lock() {
+    public void lockOnce() {
         boolean unLockSuccessed = iDistributeLocker.unLock("ABC","123");
-        Assert.isTrue(unLockSuccessed,"释放的时候，尽管没有存在的locker，但仍然是成功的");
+        Assert.isTrue(unLockSuccessed,"无");
+
+
         String key = iDistributeLocker.lock("ABC",20);
-        Assert.notNull(key, "should not be null!");
         System.out.println(key);
+        Assert.notNull(key, "should not be null!");
+
+        key = iDistributeLocker.lock("ABC",20);
+        System.out.println(key);
+        Assert.isTrue(key==null, "should  be null!");
+
+
+
 
     }
 
