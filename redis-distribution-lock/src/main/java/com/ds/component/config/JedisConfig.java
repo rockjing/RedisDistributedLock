@@ -9,23 +9,23 @@ import org.springframework.stereotype.Component;
  * on 2019/5/18.
  */
 @Component
-@ConfigurationProperties
+@ConfigurationProperties(prefix = "spring.redis")
 public class JedisConfig {
-    @Value("${spring.redis.host}")
+    @Value("${host}")
     public String host;
-    @Value("${spring.redis.port}")
+    @Value("${port}")
     public int port;
-    @Value("${spring.redis.database}")
+    @Value("${database}")
     public int database;
-    @Value("${spring.redis.jedis.pool.max-idle}")
+    @Value("${jedis.pool.max-idle}")
     public int maxIdle;
-    @Value("${spring.redis.jedis.pool.min-idle}")
+    @Value("${jedis.pool.min-idle}")
     public int minIdle;
-    @Value("${spring.redis.jedis.pool.max-active}")
+    @Value("${jedis.pool.max-active}")
     public int maxActive;
-    @Value("${spring.redis.jedis.pool.max-wait}")
+    @Value("${jedis.pool.max-wait}")
     public String maxWait;
-    @Value("${spring.redis.timeout}")
+    @Value("${timeout}")
     public String timeout;
 
     public String getHost() {
