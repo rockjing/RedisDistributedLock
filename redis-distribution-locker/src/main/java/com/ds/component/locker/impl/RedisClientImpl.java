@@ -1,6 +1,6 @@
 package com.ds.component.locker.impl;
 
-import com.ds.component.locker.RedisClient;
+import com.ds.component.locker.IRedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2019/4/3
  */
 @Component("redisClient")
-public class RedisClientImpl implements RedisClient {
+public class RedisClientImpl implements IRedisClient {
 
     @Autowired
     private RedisTemplate<String,Object> redisTemplate;

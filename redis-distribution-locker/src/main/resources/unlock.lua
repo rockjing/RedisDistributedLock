@@ -3,6 +3,11 @@ local requestIDKey = KEYS[1]
 
 local currentRequestID = ARGV[1]
 
+-- 如果不存在对应的key，则直接返会无法找到
+if redis.call("EXISTS",KEYS[1]) == 0
+then
+return 2 end
+
 -- 判断requestID一致性
 if redis.call('hget',KEYS[1],'lockKey') == currentRequestID
 then

@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ds.component</groupId>
-    <artifactId>redis-distribution-lock</artifactId>
+    <artifactId>redis-distribution-locker</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

@@ -11,7 +11,7 @@
     <modules>
         <module>aspectDemo</module>
         <module>redisDistributeLock</module>
-        <module>redis-distribution-lock</module>
+        <module>redis-distribution-locker</module>
     </modules>
 
     <name>DistributeLock</name>

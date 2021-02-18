@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisPassword;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
@@ -49,12 +50,14 @@ public class RedisConfig extends CachingConfigurerSupport {
         redisStandaloneConfiguration.setDatabase(jedisConfig.getDatabase());
         redisStandaloneConfiguration.setPort(jedisConfig.getPort());
         redisStandaloneConfiguration.setHostName(jedisConfig.getHost());
+        redisStandaloneConfiguration.setPassword( RedisPassword.of(jedisConfig.getPassword()));
+
 
         return new JedisConnectionFactory(redisStandaloneConfiguration, jedisClientConfiguration);
     }
 
     /**
-     * retemplate相关配置
+     * redis template相关配置
      */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(JedisConnectionFactory factory) {

@@ -12,13 +12,19 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "spring.redis")
 public class JedisConfig {
 
-    public String host;
+    private String host;
 
-    public int port;
+    private int port;
 
-    public int database;
+    private int database;
 
-    public String timeout;
+
+
+    private String password;
+
+
+
+    private String timeout;
 
 
     @Value("${spring.redis.jedis.pool.max-idle}")
@@ -30,6 +36,14 @@ public class JedisConfig {
     @Value("${spring.redis.jedis.pool.max-wait}")
     public String maxWait;
 
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
 
     public String getHost() {

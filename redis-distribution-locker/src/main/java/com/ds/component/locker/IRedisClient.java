@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @author xiongyx
  * @date 2019/5/21
  */
-public interface RedisClient {
+public interface IRedisClient {
 
     /**
      * 执行脚本
