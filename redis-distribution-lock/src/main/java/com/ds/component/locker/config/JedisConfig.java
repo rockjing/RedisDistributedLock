@@ -11,22 +11,26 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "spring.redis")
 public class JedisConfig {
-    @Value("${host}")
+
     public String host;
-    @Value("${port}")
+
     public int port;
-    @Value("${database}")
+
     public int database;
-    @Value("${jedis.pool.max-idle}")
-    public int maxIdle;
-    @Value("${jedis.pool.min-idle}")
-    public int minIdle;
-    @Value("${jedis.pool.max-active}")
-    public int maxActive;
-    @Value("${jedis.pool.max-wait}")
-    public String maxWait;
-    @Value("${timeout}")
+
     public String timeout;
+
+
+    @Value("${spring.redis.jedis.pool.max-idle}")
+    public int maxIdle;
+    @Value("${spring.redis.jedis.pool.min-idle}")
+    public int minIdle;
+    @Value("${spring.redis.jedis.pool.max-active}")
+    public int maxActive;
+    @Value("${spring.redis.jedis.pool.max-wait}")
+    public String maxWait;
+
+
 
     public String getHost() {
         return host;

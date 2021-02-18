@@ -14,9 +14,13 @@ public class JedisConfigTest {
     @Autowired
     JedisConfig jedisConfig;
     @Test
-    public void getHost() {
+    public void testConfigIsOK() {
 
         Assert.notNull(jedisConfig.getHost(),"should not null!");
+        Assert.notNull(jedisConfig.getTimeout(),"should not null!");
+
+
+        Assert.isTrue(jedisConfig.getMaxIdle()>0,"should not null!");
 
 
     }
